@@ -1,6 +1,6 @@
 {
   "name": "foodapp",
-  "homepage": "https://souvikbumble.github.io/foodie-bites",
+  "homepage": "https://souvikbumble.github.io/foodie-bites/",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://127.0.0.1:5000",
@@ -41,7 +41,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b main -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
