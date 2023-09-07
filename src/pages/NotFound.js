@@ -1,5 +1,5 @@
 import React from 'react';
-import Lottie from 'react-lottie';
+// import Lottie from 'react-lottie';
 import { AiOutlineReload } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { Button, Box, makeStyles } from '@material-ui/core';
@@ -50,7 +50,7 @@ export default function NotFound({
   return (
     <Box className={root2}>
       <Box className={root}>
-        <Lottie options={defaultOptions} />
+        {/* <Lottie options={defaultOptions} /> */}
 
         <Box mt="4">
           <Button
