@@ -1,2 +1,0 @@
-# foodie-bites
-Foodie Bites 
