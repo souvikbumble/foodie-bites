@@ -19,6 +19,8 @@ import Profile from '../layout/MainLayout/Header/ProfileSection.js';
 import Sidedrawer from './Sidedrawer.js';
 import CartSection from '../layout/MainLayout/Header/CartSection.js';
 
+import Avatar from '@mui/material/Avatar';
+
 const headersData = (path) => [
   {
     label: 'Home',
@@ -44,6 +46,7 @@ const useStyles = makeStyles({
     '@media (max-width: 900px)': {
       paddingLeft: 0,
     },
+    backgroundColor: '#fcc82b'
   }),
   logo: {
     fontFamily: 'Mulish, sans-serif',
@@ -171,7 +174,9 @@ export default function Navbar() {
               onClick: handleDrawerOpen,
             }}
           >
-            <MenuIcon />
+            {/* <Avatar src={'http://www.wpsimplesponsorships.com/wp-content/uploads/2019/05/cropped-icon-256x256.png'} /> */}
+            <Avatar src={'https://doc-00-3c-docs.googleusercontent.com/docs/securesc/dqg6ae47v9qd0aqveg2n51j7ec8nf9pr/9e6hpmlmmdqq0pvv43nlm2gv0o7b19kb/1694802600000/10600387297820325428/10600387297820325428/1aTX0_2goiXoUjlN1shqvXornK6EPgbdb?ax=AA75yW4Xx1LEiHawnMTe0tw3LAWuZ1K0BC-s_XRMTegpfwy0ncHS_qLR6EbcJwVPKEqNl9ZS8epTW9EtjEtlvUn727J_d-GBBvMSu3yRl5aHpRquQL9f1SahoFmTbRZgVbRlkHaxKCG4ytTOg7JI5jRB1NDxwptPnrqvhRsMVpJXZU4rihrGZXo6atlSLHQKp6JhaEJMIr8tzwKByEEjTe9OPzaytOdmnN1i9uB1O9TMhAcmPEo7Um219nYSV9PMeluO6uGXWW-lMm4Kk-AqFdy3Z5y9w9D0-4jZmGopoPb8YfCn9mjBYx3odwrbOx7iUpFKc4yRSJ1bzSyxAc-RPEU_OPiTmAIVBr-wzUtovwBIJRRrIRs7HeAHoXGN6JzTl9MQx5UL6g1OgcBOo2LY5ARw1jL7c2E8K83swyKhb3nKzxXATn8cBRcMUc2rOpSUULwoaJwjWBwk3nRDsY_y97vzCCbda-rW2R0rCOzYD0tKxaAfauagl6XNVf4xUDjw_IbaCpSapgEqR6oTPqak2ekSR6p2xWK5ryk4LiDMY4GByDP3u33fNNnvN0rQ0gZ9J-xyLLJluK0eu7hgqB4C2BZ89dTBxEq48IkRaosVcgBajTysuRnN7Bu-T1eyFeRsPKnN3zelTeH9sTBlb2Qde1T91vz5WB5blIZiECFTHysX-aA3UnFSifJKpXgJQRdrO6zbhlsah0AEVDko_t9yADyxDDEpg6ryOZK9vYvM-QLnHc0kNKiN6vKHurIPmxMJ3A9wCvUCFOIPxkOfc0iETxD9BhowFJUQZyyEEeqBqmEztn2MB0eYtAGY4l8zVJWdlcgM8FPcFcZWRNbK2p-4Lggg8Wy8u0JDqmMGuvUtKzQBT4zhdhK47V_RQqX10TygQIxptA&uuid=48246481-7b0a-474e-a078-52f199875cda&authuser=0&nonce=f3gebb45ev6b0&user=10600387297820325428&hash=loctpn370ugc02eq6k9kugmvla0udvn7'} />
+            {/* <MenuIcon /> */}
           </IconButton>
           <Drawer
             {...{

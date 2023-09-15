@@ -12,7 +12,10 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
-import { Carousel } from 'react-responsive-carousel';
+// import { Carousel } from 'react-responsive-carousel';
+
+import Carousel from 'react-material-ui-carousel';
+import CarouselSlide from 'react-material-ui-carousel';
 
 const slides = [
   {
@@ -144,7 +147,7 @@ export default function LeaderBoard() {
 
   return (
     <div>
-      <div className={leaderBoard}>
+      <div className={leaderBoard} display={'flex'} flexDirection={'row'}>
         <div className={leaderBoard_left}>
           <Typography
             className={leaderBoard_left_h1}
@@ -187,18 +190,17 @@ export default function LeaderBoard() {
             />
           </div>
         </div>
-         <Box style={{ marginTop: '50px' }}>
-          <Carousel
-            autoPlay={true}
-            showStatus={false}
-            showThumbs={false}
-          >
+         <Box 
+            style={{ marginTop: '100px', marginRight: '0px', width: '100%' }}
+         >
+        <Carousel
+          interval={2000}
+          stopAutoPlayOnHover={false}
+        >
             {slides.map((x, i) => (
-              <div key={i}>
-                <img style={{ height: "300px", width: "300px" }} src={x.url} alt={`Slide ${i}`} />
-              </div>
+                <img style={{ height: "500px", width: "500px" }} src={x.url} alt={`Slide ${i}`} />
             ))}
-          </Carousel>
+        </Carousel>
         </Box>
       </div>
     </div>
