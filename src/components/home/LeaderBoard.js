@@ -1,10 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, makeStyles, Button } from '@material-ui/core';
+import {
+  Typography,
+  makeStyles,
+  Button,
+  Card,
+  CardMedia,
+  Box,
+} from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import LocalMallIcon from '@material-ui/icons/LocalMall';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import { Carousel } from 'react-responsive-carousel';
+
+const slides = [
+  {
+    url: 'https://www.vegrecipesofindia.com/wp-content/uploads/2016/10/aloo-posto-recipe-1a.jpg',
+  },
+  {
+    url: 'https://www.indianhealthyrecipes.com/wp-content/uploads/2019/02/chicken-biryani-recipe-500x375.jpg',
+  },
+  {
+    url: 'https://www.cubesnjuliennes.com/wp-content/uploads/2022/12/Tandoori-Chicken-Recipe.jpg',
+  },
+];
 
 const useStyles = makeStyles(() => ({
   header: {
@@ -17,6 +37,7 @@ const useStyles = makeStyles(() => ({
   },
   leaderBoard: {
     display: 'flex',
+    flexDirection: 'row',
     paddingRight: '79px',
     paddingLeft: '118px',
     background: "url('home_bg.jpg')",
@@ -87,6 +108,16 @@ const useStyles = makeStyles(() => ({
       gap: '0px',
     },
   },
+  left: {
+    marginTop: '150px',
+    height: '300px',
+    width: '300px',
+    maxHeight: '300px',
+    maxWidth: '300px',
+    display: 'flex',
+    flexDirection:"row",
+    alignItems: 'right',
+  },
 }));
 
 export default function LeaderBoard() {
@@ -156,7 +187,19 @@ export default function LeaderBoard() {
             />
           </div>
         </div>
-        <div className={left}></div>
+         <Box style={{ marginTop: '50px' }}>
+          <Carousel
+            autoPlay={true}
+            showStatus={false}
+            showThumbs={false}
+          >
+            {slides.map((x, i) => (
+              <div key={i}>
+                <img style={{ height: "300px", width: "300px" }} src={x.url} alt={`Slide ${i}`} />
+              </div>
+            ))}
+          </Carousel>
+        </Box>
       </div>
     </div>
   );

@@ -1,6 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography, makeStyles, Button } from '@material-ui/core';
+import {
+  Typography,
+  makeStyles,
+  Button,
+  Card,
+  CardMedia,
+} from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,11 +28,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   about_section_left: {
-    width: '50%',
-    '@media (max-width: 900px)': {
+    marginTop: '80px',
+    minHeight: '500px',
+    width: '80%',
+    '@media (max-width: 300px)': {
       width: '30%',
     },
-    '@media (max-width: 750px)': {
+    '@media (max-width: 300px)': {
       width: '0%',
     },
   },
@@ -50,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     borderRadius: '20px',
-    width: '150px',
+    width: '250px',
     marginTop: '30px',
     textTransform: 'lowercase',
   },
@@ -78,7 +86,17 @@ export default function AboutSection() {
   } = useStyles();
   return (
     <div className={about_section}>
-      <div className={about_section_left}></div>
+      <div className={about_section_left}>
+        <Card sx={{ width: '300px', height: '500px', borderRadius:'12px' }}>
+          <CardMedia
+            id="card-media-iframe-1"
+            style={{ width: '100%', height: '350px',borderRadius:'12px' }}
+            component="iframe"
+            src="https://www.youtube.com/embed/i_RjQLlpjN0"
+          />
+        </Card>
+        
+      </div>
       <div className={about_section_right}>
         <Typography className={about_title} component="h1">
           About

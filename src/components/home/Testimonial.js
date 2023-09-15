@@ -50,7 +50,7 @@ export default function Testimonial({ review, name, location }) {
   } = useStyles();
   return (
     <div className={testimonial}>
-      <img className={testimonial_img} src="./testimonial_1.png"></img>
+      <img className={testimonial_img} src="https://media.licdn.com/dms/image/C4D03AQHNwgf-yQl-pA/profile-displayphoto-shrink_800_800/0/1655961308233?e=2147483647&v=beta&t=hWL-zx_RCUjc3dWXQZkyXT_ot4a2ClpXzR25TLbCRx0"></img>
       <div className={testimonial_right}>
         <Typography className={testimonial_quote} variant="h2" component="h1">
           {review}

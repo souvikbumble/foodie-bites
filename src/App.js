@@ -16,12 +16,12 @@ import Routes from './routes';
 function App() {
   const dispatch = useDispatch();
   const online = useOnline();
-  useEffect(() => {
-    dotenv.config();
-    (async function () {
-      await dispatch(getAllMeals());
-    })();
-  }, []);
+  // useEffect(() => {
+  //   dotenv.config();
+  //   (async function () {
+  //     await dispatch(getAllMeals());
+  //   })();
+  // }, []);
 
   return (
     <ThemeProvider theme={theme}>

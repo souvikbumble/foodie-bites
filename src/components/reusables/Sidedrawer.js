@@ -92,11 +92,11 @@ export default function Sidedrawer(props) {
   const userData = () => {
     return (
       <Box className={usersection}>
-        <Avatar sx={{ width: 60, height: 60 }} alt="John Doe">
+        <Avatar sx={{ width: 60, height: 60 }} alt="Sayanta Hazra">
           <AiOutlineUser />
         </Avatar>
         <Typography component="h2">
-          {auth.authenticated ? auth.user.firstName : 'John Doe'}
+          {auth.authenticated ? auth.user.firstName : 'Sayanta Hazra'}
         </Typography>
       </Box>
     );
@@ -128,7 +128,7 @@ export default function Sidedrawer(props) {
             {link.title}
           </Button>
         ))}
-        <Button
+        {/* <Button
           classes={{ startIcon: label }}
           end="true"
           disableElevation
@@ -141,7 +141,7 @@ export default function Sidedrawer(props) {
           }
         >
           About Me
-        </Button>
+        </Button> */}
       </ListStyle>
     </>
   );

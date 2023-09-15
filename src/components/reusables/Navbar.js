@@ -61,6 +61,7 @@ const useStyles = makeStyles({
   toolbar: {
     display: 'flex',
     justifyContent: 'space-between',
+    // color:'#FCC82B',
   },
   drawerContainer: {
     padding: '5px 0px',
